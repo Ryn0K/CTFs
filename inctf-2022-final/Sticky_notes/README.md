@@ -2,11 +2,11 @@
 
 **category** : web\
 **tag** : java, deserialization, reflection api\
-**source** : [source with docker-compose.yml file](https://github.com/Ryn0K/CTF_Writeups/tree/master/inctf-2022-final/web/Sticky-notes/handout/Sticky_notes)
+**source** : [source with docker-compose.yml file](https://github.com/Ryn0K/CTFs/tree/master/inctf-2022-final/Sticky_notes)
 
 ## Analysis : 
 
-we have spring boot application , need to analyse the [.jar](https://github.com/Ryn0K/CTF_Writeups/blob/master/inctf-2022-final/web/Sticky-notes/handout/Sticky_notes/deployment/Sticky_notes.jar) file  at [https://jdec.app/](https://jdec.app/)
+we have spring boot application , need to analyse the [.jar](https://github.com/Ryn0K/CTFs/blob/master/inctf-2022-final/Sticky_notes/deployment/Sticky_notes.jar) file  at [https://jdec.app/](https://jdec.app/)
 
 ![img1](https://i.imgur.com/8cWS0oy.png)
 
@@ -148,11 +148,11 @@ note_string.add(result.get_notes());
 
 ## Exploitation
 
-exploit [here](https://github.com/Ryn0K/CTF_Writeups/tree/master/inctf-2022-final/web/Sticky-notes/Exploit)
+exploit [here](https://github.com/Ryn0K/CTFs/tree/master/inctf-2022-final/Sticky_notes/exploit)
 
 i am using `reflection api` here, so reader should read that first cause i am not going detail overhere.
 
-[exploit.java](https://github.com/Ryn0K/CTF_Writeups/blob/master/inctf-2022-final/web/Sticky-notes/Exploit/exploit.java)
+[exploit.java](https://github.com/Ryn0K/CTFs/tree/master/inctf-2022-final/Sticky_notes/exploit/exploit.java)
 
 ```java
 import java.io.*;
