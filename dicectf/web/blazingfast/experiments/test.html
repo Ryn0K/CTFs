@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<script>
+for(let i=0 ;i <1000000;++i){
+  let c = String.fromCodePoint(i);
+  let l_c  = c.length;
+  let u = c.toUpperCase();
+  let l_u = u.length;
+  if(l_u > l_c){
+    console.log(`${c}(${l_c}) -> ${u}(${l_u})`);
+  }
+}
+</script>
