@@ -135,6 +135,7 @@ for(let i=0 ;i <1000000;++i){
 
 ```
 ![3](https://i.imgur.com/nMVlZDT.png)
+
 3. you can see `toUpperCase()`, weird behaviour with different characters like (ﬃ,ﬄ,ß,etc...) and with different `lengths` after converting to `uppercase`.
 
 4. So we can use ,this to truncate `length` of payload and inject `xss` payload.
