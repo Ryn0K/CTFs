@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<script>
+const id = "1";
+const username='karan';
+const note = ":mode";
+const mode = ",0,0) --+";
+//const note = "hello:mode";
+//const mode = ',"plain",0)--+'
+const db = {
+  prepare: (query, params) => {
+    if (params)
+      for (const [key, value] of Object.entries(params)) {
+        const clean = value.replace(/['$]/g, '');
+        console.log(key,clean);
+        query = query.replaceAll(`:${key}`, `'${clean}'`);
+      }
+    return query;
+  },
+  get: (query, params) => {
+    return db.prepare(query, params);
+  },
+  run: (query, params) => {
+    return  db.prepare(query, params);
+  },
+};
+console.log(db.run('INSERT INTO notes VALUES (:id, :username, :note, :mode, 0)', {
+    id,
+    username,
+    note: note.replace(/[<>]/g, ''),
+    mode,
+  }));
+  </script>
+</html>

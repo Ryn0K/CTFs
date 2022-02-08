@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>just xss testing</title>
+</head>
+<body>
+<div>
+	<div class="note"></div>
+	<hr />
+	<em><span>hello</span></em>
+</div>
+<script>
+	let text =new URLSearchParams(window.location.search).get("text");
+	text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, (match, p1, p2) => {
+		return `<a href="${p2}">${p1}</a>`;
+	});
+	text = text.replace(/#\s*([^\n]+)/g, (match, p1) => {
+		return `<h1>${p1}</h1>`;
+	});
+	text = text.replace(/\*\*([^\n]+)\*\*/g, (match, p1) => {
+		return `<strong>${p1}</strong>`;
+	});
+	text = text.replace(/\*([^\n]+)\*/g, (match, p1) => {
+		return `<em>${p1}</em>`;
+	});
+
+	document.querySelector('.note').innerHTML = text;
+</script>
+</body>
+</html>
