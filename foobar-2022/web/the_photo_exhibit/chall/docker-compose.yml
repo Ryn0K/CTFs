@@ -1,0 +1,8 @@
+version: '3.0'
+services:
+  webapp:
+    build: .
+    container_name: foobar-ctf-the-photo-exhibit
+    ports:
+      - '7778:3000'
+    

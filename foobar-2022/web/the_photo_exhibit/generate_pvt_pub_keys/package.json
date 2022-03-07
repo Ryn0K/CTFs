@@ -1,0 +1,16 @@
+{
+  "name": "exploit_testing",
+  "version": "1.0.0",
+  "description": "exploit testing for foo-bar ctf challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index2.js"
+  },
+  "keywords": [],
+  "author": "krn_bhargav",
+  "license": "ISC",
+  "dependencies": {
+    "jwks-rsa": "^2.0.5",
+    "node-rsa": "^1.1.1"
+  }
+}
